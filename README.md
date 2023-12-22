@@ -1,8 +1,10 @@
 # Dcat Admin 音视频预览扩展
 
+[![](https://img.shields.io/packagist/v/zwping/dcat-media-player.svg)](https://packagist.org/packages/zwping/dcat-media-player)
+
 #### 安装
 ```
-composer require abovesky/dcat-media-player
+composer require zwping/dcat-media-player
 ```
 
 >具体安装方法请参考官方文档
