@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 class VideoLazyRender extends LazyRenderable
 {
     public static $js = [
-        '@extension/abovesky/dcat-media-player/DPlayer/DPlayer.min.js',
+        '@extension/zwping/dcat-media-player/DPlayer/DPlayer.min.js',
     ];
 
     protected function addScript()

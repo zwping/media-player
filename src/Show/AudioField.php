@@ -14,8 +14,8 @@ class AudioField extends AbstractField
 
     protected function requireAssets()
     {
-        Admin::js(['@extension/abovesky/dcat-media-player/APlayer/APlayer.min.js']);
-        Admin::css(['@extension/abovesky/dcat-media-player/APlayer/APlayer.min.css']);
+        Admin::js(['@extension/zwping/dcat-media-player/APlayer/APlayer.min.js']);
+        Admin::css(['@extension/zwping/dcat-media-player/APlayer/APlayer.min.css']);
     }
 
     protected function addScript()

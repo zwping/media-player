@@ -14,7 +14,7 @@ class VideoField extends AbstractField
 
     protected static function requireAssets()
     {
-        Admin::js(['@extension/abovesky/dcat-media-player/DPlayer/DPlayer.min.js']);
+        Admin::js(['@extension/zwping/dcat-media-player/DPlayer/DPlayer.min.js']);
     }
 
     protected function addScript()

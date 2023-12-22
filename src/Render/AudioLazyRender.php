@@ -9,11 +9,11 @@ use Illuminate\Support\Str;
 class AudioLazyRender extends LazyRenderable
 {
     public static $js = [
-        '@extension/abovesky/dcat-media-player/APlayer/APlayer.min.js',
+        '@extension/zwping/dcat-media-player/APlayer/APlayer.min.js',
     ];
 
     public static $css = [
-        '@extension/abovesky/dcat-media-player/APlayer/APlayer.min.css',
+        '@extension/zwping/dcat-media-player/APlayer/APlayer.min.css',
     ];
 
     protected function addScript()
