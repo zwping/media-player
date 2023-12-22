@@ -1,11 +1,15 @@
 {
-    "name": "abovesky/dcat-media-player",
+    "name": "zwping/dcat-media-player",
     "description": "Dcat Admin 音视频预览扩展",
     "type": "library",
     "keywords": ["dcat-admin", "extension", "media-player"],
-    "homepage": "https://github.com/dcat-admin-extensions/media-player",
+    "homepage": "https://github.com/zwping/media-player",
     "license": "MIT",
     "authors": [
+        {
+            "name": "zwping",
+            "email": "1101558280@qq.com"
+        },
         {
             "name": "abovesky",
             "email": "abovesky@qq.com"
