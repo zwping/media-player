@@ -22,6 +22,8 @@ window.dplayer = new DPlayer({
     container: document.getElementById('$this->id'),
     video: {
         url: '$this->url',
+        screenshot: '$this->screenshot',
+        pic: '$this->cover',
     },
 });
 JS

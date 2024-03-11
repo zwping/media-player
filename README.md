@@ -2,15 +2,18 @@
 
 [![](https://img.shields.io/packagist/v/zwping/dcat-media-player.svg)](https://packagist.org/packages/zwping/dcat-media-player)
 
-#### 安装
-```
-composer require zwping/dcat-media-player
-```
+## 截图
 
->具体安装方法请参考官方文档
+![main](https://raw.githubusercontent.com/zwping/media-player/master/screenshot/main.png)
+![show](https://raw.githubusercontent.com/zwping/media-player/master/screenshot/show.png)
 
-#### 使用方法
-```$xslt
+## 安装
+
+1. `composer require zwping/dcat-media-player`
+2. 扩展中更新&启用
+
+## 使用方法
+```
 // 数据表格中使用
 $grid->column('video')->video();
 $grid->column('audio')->audio();
@@ -28,15 +31,13 @@ $grid->column('video')->video(function (\Abovesky\DcatAdmin\MediaPlayer\Grid\Vid
     $video->icon('fa fa-play');
     // 自定义服务器地址
     $video->server('http://cdn.domain.com/');
+    // 设置播放器设置
+    $video->setControls(string $cover='', bool $screenshot=true);
 });
 
 // 数据详情中使用
-$show->field('video')->video();
-$show->field('audio')->audio();
+$show->field('video')->video(string $server='', string $cover='', bool $screenshot=true);
+$show->field('audio')->audio(string $server='', string $name='', string $artist='', string $cover='');
 ```
-
-#### License
-
-Licensed under The [MIT License (MIT). ](https://github.com/dcat-admin-extensions/media-player/blob/master/LICENSE)
 
 

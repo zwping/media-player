@@ -11,6 +11,9 @@ class AudioField extends AbstractField
 {
     private string $id;
     private string $url;
+    private string $name;
+    private string $artist;
+    private string $cover;
 
     protected function requireAssets()
     {
@@ -28,10 +31,10 @@ const ap = new APlayer({
     container: document.getElementById('$this->id'),
     listFolded: true,
     audio: [{
-        name: '',
-        artist: '',
+        name: '$this->name',
+        artist: '$this->artist',
         url: '$this->url',
-        cover: ''
+        cover: '$this->cover'
     }]
 });
 
@@ -42,8 +45,10 @@ JS
         );
     }
 
-    public function render($server = '')
-    {
+    public function render(string $server='', string $name='', string $artist='', string $cover='') {
+        $this->name = $name;
+        $this->artist = $artist;
+        $this->cover = $cover;
         $this->url = MediaPlayer::getValidUrl($this->value, $server);
 
         if (empty($this->url)) {

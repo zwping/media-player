@@ -25,9 +25,13 @@
      *     $video->icon('fa fa-play');
      *     // 自定义服务器地址
      *     $video->server('http://cdn.domain.com/');
+     *     // 设置播放器设置
+     *     $video->setControls(string $cover='', bool $screenshot=true);
+     *     // 音频播放器设置
+     *     $audio->setControls(string $name='', string $artist='', string $cover='');
      * });
-     * @method Abovesky\DcatAdmin\MediaPlayer\Grid\VideoDisplayer video()
-     * @method Abovesky\DcatAdmin\MediaPlayer\Grid\AudioDisplayer audio()
+     * @method \Abovesky\DcatAdmin\MediaPlayer\Grid\VideoDisplayer video()
+     * @method \Abovesky\DcatAdmin\MediaPlayer\Grid\AudioDisplayer audio()
      */
     class Column { }
 
@@ -36,23 +40,8 @@
  namespace Dcat\Admin\Show {
 
     /**
-     * 简单使用
-     * $show->field('video')->video();
-     * 设置服务器地址
-     * $show->field('video')->video('http://cdn.domain.com/');
-     * 高级自定义用法
-     * $show->field('video')->video(function (\Abovesky\DcatAdmin\MediaPlayer\Grid\VideoDisplayer $video){
-     *     // 自定义弹窗标题
-     *     $video->title('标题');
-     *     // 自定义按钮文字
-     *     $video->button('按钮文字');
-     *     // 自定义按钮图标
-     *     $video->icon('fa fa-play');
-     *     // 自定义服务器地址
-     *     $video->server('http://cdn.domain.com/');
-     * });
-     * @method Abovesky\DcatAdmin\MediaPlayer\Show\VideoField video()
-     * @method Abovesky\DcatAdmin\MediaPlayer\Show\AudioField audio()
+     * @method \Abovesky\DcatAdmin\MediaPlayer\Show\VideoField video(string $server='', string $cover='', bool $screenshot=true)
+     * @method \Abovesky\DcatAdmin\MediaPlayer\Show\AudioField audio(string $server='', string $name='', string $artist='', string $cover='')
      */
     class Field { }
     

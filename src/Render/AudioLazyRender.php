@@ -26,10 +26,10 @@ window.aplayer = new APlayer({
     container: document.getElementById('$this->id'),
     listFolded: true,
     audio: [{
-        name: '',
-        artist: '',
+        name: '$this->name',
+        artist: '$this->artist',
         url: '$this->url',
-        cover: ''
+        cover: '$this->cover',
     }]
 });
 JS

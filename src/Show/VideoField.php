@@ -11,6 +11,9 @@ class VideoField extends AbstractField
 {
     private $id;
     private $url;
+    private string $cover;
+    private bool $screenshot;
+
 
     protected static function requireAssets()
     {
@@ -27,6 +30,8 @@ const dp = new DPlayer({
     container: document.getElementById('$this->id'),
     video: {
         url: '$this->url',
+        screenshot: '$this->screenshot',
+        pic: '$this->cover',
     },
 });
 
@@ -37,8 +42,9 @@ JS
         );
     }
 
-    public function render($server = '')
-    {
+    public function render(string $server='', string $cover='', bool $screenshot=true) {
+        $this->cover = $cover;
+        $this->screenshot = $screenshot;
         $this->url = MediaPlayer::getValidUrl($this->value, $server);
 
         if (empty($this->url)) {
